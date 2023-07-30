@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'anydore';
+    src: url(Fonts/anydore.regular.otf);
+}
+
+@font-face {
+    font-family: 'Adlery';
+    src: url(Fonts/Adlery-Pro-trial.ttf);
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(Fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'poppins_italic';
+    src: url(Fonts/Poppins-ExtraLightItalic.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: 100vh;
+    background-image: url(Pottery/quino-al-zjL2nfIoq3U-unsplash.jpg);
+    background-repeat: none;
+    background-size: cover;
+    
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.hero{
+    
+    height: 100vh;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.logo{
+    font-family: Adlery;
+    font-size: clamp(40px, 4vw, 60px);
+    letter-spacing: 0px;
+    color: rgb(126, 75, 38);
+    text-shadow: 2px 2px 3px #444 ;
+    
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.intro img{
+    width: clamp(400px, 15vw, 550px);
+    border-radius: 100%;
+    border: 7px solid rgb(126, 75, 38);
+}
+
+.intro .image{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.intro .word{
+    
+    text-align: center;
+    color: white;
+    font-size: clamp(35px, 3vw, 60px);
+    font-family: poppins;
+    letter-spacing: 3px;
+    
+}
+
+.intro button{
+    width: 200px;
+    height: 80px;
+    background-color: rgb(126, 75, 38);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    font-family: poppins;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px #444,
+                -5px -5px 10px #444;
+}
+
+.intro button:hover{
+    background-color: rgb(110, 66, 34);
+}
+
+
+span{
+    position: relative;
+    color: rgb(126, 75, 38);
+}
+
+span::before{
+    content: " ";
+    position: absolute;
+    height: clamp(40px, 3vw, 65px);
+    width: 5px;
+    background: black;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+
+span.stop-blinking::before{
+    animation: none;
+}
+
+
+
+
+
+.quote{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote h1{
+    backdrop-filter: blur(4px);
+    border-radius: 50px;
+    padding: 100px;
+    font-size: clamp(20px, 4vw, 50px);
+    color: white;
+    font-family: poppins_italic;
+    text-shadow: 3px 3px 5px rgb(44, 44, 44);
+}
+
