@@ -31,6 +31,7 @@ body{
     background-image: url(Pottery/quino-al-zjL2nfIoq3U-unsplash.jpg);
     background-repeat: none;
     background-size: cover;
+    background-position: center;
     
 }
 
@@ -49,7 +50,7 @@ body{
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 
 }
 
@@ -71,9 +72,9 @@ nav{
 
 .intro{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 100px;
     width: 100%;
 }
 
@@ -86,23 +87,27 @@ nav{
 .intro .image{
     display: flex;
     justify-content: center;
+    padding: 0 30px;
 }
 
 
 
 .intro .word{
     
-    text-align: center;
+    /* text-align: center; */
     color: white;
     font-size: clamp(35px, 3vw, 60px);
     font-family: poppins;
     letter-spacing: 3px;
+    width: clamp(530px, 45vw, 800px);
+    padding: 0 30px;
     
 }
 
 .intro button{
     width: 200px;
     height: 80px;
+    margin-top: 30px;
     background-color: rgb(126, 75, 38);
     border: none;
     color: white;
@@ -115,6 +120,7 @@ nav{
 
 .intro button:hover{
     background-color: rgb(110, 66, 34);
+    cursor: pointer;
 }
 
 
@@ -165,5 +171,171 @@ span.stop-blinking::before{
     color: white;
     font-family: poppins_italic;
     text-shadow: 3px 3px 5px rgb(44, 44, 44);
+}
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    color: rgb(126, 75, 38);
+    padding: 0 40px;
+    
+}
+
+.contact .wrapper{
+    padding: 40px;
+    border-radius: 15px;
+    background-color: white;
+    
+    
+    
+}
+
+.contact .wrapper h1{
+    font-size: clamp(20px, 9vw, 50px);
+    text-align: center;
+    
+}
+
+.contact .wrapper input, textarea{
+    width: 750px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(126, 75, 38);
+    border: none;
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    background-color: inherit;
+}
+
+.contact .wrapper textarea{
+    height: 150px;
+    padding-top: 10px;
+}
+
+
+.contact .wrapper input::placeholder{
+    color: rgb(126, 75, 38);
+}
+.contact .wrapper textarea::placeholder{
+    color: rgb(126, 75, 38);
+}
+
+.contact .wrapper input:focus{
+    border: none;
+}
+.contact .wrapper textarea:focus{
+    border: none;
+}
+
+.contact .wrapper .large{
+    height: 250px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.bottom button{
+    width: 150px;
+    height: 60px;
+    background-color: rgb(126, 75, 38);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    
+    transition: 500ms;
+}
+
+.bottom button:hover{
+    box-shadow: none;
+    background-color: rgb(110, 66, 34);
+    cursor: pointer;
+    
+}
+
+.bottom .socials{
+    
+    list-style: none;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom .socials a{
+    color: black;
+    transition: 500ms;
+}
+.bottom .socials a:hover{
+    color: blue;
+}
+
+.bottom .socials .icons{
+    width: 40px;
+    height: 40px;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .intro{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .intro img{
+        width: 300px;
+    }
+
+    .intro .word{
+        text-align: center;
+        font-size: 1.7em;
+    }
+    .intro .word button{
+        width: 200px;
+    }
+
+    .quote{
+        padding: 0px 20px;
+    }
+
+    .quote h1{
+        font-size: 1.5em;
+        padding: 40px;
+    }
+
+    .contact .wrapper{
+        padding: 20px;
+    }
+
+    .contact .wrapper input, textarea{
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .bottom .socials{
+        width: 100px;
+    }
+    
+    .bottom .socials .icons{
+        width: 25px;
+        height: 25px;
+    }
+
+    .bottom button{
+        height: 50px;
+    }
+
 }
 
